@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Tag</title>
+</head>
+
+<body>
+  <p>
+    Web Form: ஒரு பயனர், இணையத்தளம் ஒன்றிற்கு அனுப்புகின்ற தரவுகள்
+    <!-- HTML <input /> Tag: -->
+  </p>
+
+  <form>
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" /><br /><br />
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" /><br /><br />
+    <input type="submit" value="Submit" />
+  </form>
+
+  <p>Browse கொடுத்து accept: ------</p>
+
+  <p>
+    <label for="soundFile">Select an audio file:</label>
+    <input type="file" id="soundFile" accept="audio/*" />
+  </p>
+  <p>
+    <label for="videoFile">Select a video file:</label>
+    <input type="file" id="videoFile" accept="video/*" />
+  </p>
+  <p>
+    <label for="imageFile">Select some images:</label>
+    <input type="file" id="imageFile" accept="image/*" multiple />
+  </p>
+
+  <p>alt: ----</p>
+
+  <form action="/index.jsp">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" />
+    <input type="image" src="submit.gif" alt="ok" width="48" height="48" />
+  </form>
+
+  <p>autocomplete: -----------</p>
+
+  <form action="/index.jsp" autocomplete="on">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" /><br /><br />
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" /><br /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="off" /><br /><br />
+    <input type="submit" />
+  </form>
+  <br>
+
+  <p>autofocus: ---------</p>
+
+  <form action="/index.jsp" autocomplete="on">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" autofocus /><br /><br />
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" /><br /><br />
+    <input type="submit" />
+  </form>
+  <br>
+  <p> Radio Buttons:</p>
+
+  <label for="html">
+    <h2>HTML</h2>
+    <input type="radio" id="html" name="fav_language" value="HTML" /> HTML
+  </label>
+
+  <label for="css">
+    <h2>CSS</h2>
+    <input type="radio" id="css" name="fav_language" value="CSS" /> CSS
+  </label>
+  <label for="javascript">
+    <h2>JavaScript</h2>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript" /> javascript
+  </label>
+  <br>
+
+  <p> Input Box - Password:</p>
+
+  <input type="text" id="fname" name="fname" value="Kathir" /><br />
+  <label for="lname">
+    <h3>Password:</h3>
+  </label><br />
+  <input type="password" id="lname" name="lname" value="Kumaran" /><br /><br />
+
+  <p>Input Box - Max length:</p>
+  <form>
+    <label for="mobile">Mobile Number:</label>
+    <input type="text" id="mobileno" name="mobile" maxlength="10" /><br /><br />
+    <input type="submit" value="Submit" />
+  </form>
+  <br>
+  <p> Drop Down / Select Box</p>
+
+  <label for="courses">
+    <h2>Choose Course</h2>
+  </label>
+
+
+  <!--<select id="courses" name="courses">-->
+  <!--<select id="courses" name="courses" size="3">-->
+  <!-- <select id="courses" name="courses" size="4" multiple> -->
+  <select name="courses" id="courses">
+    <option value="java">JAVA</option>
+    <option value="pyhon">Python</option>
+    <option value="ruby">Ruby</option>
+    <option value="sql">sql</option>
+  </select>
+
+  <br>
+  <p> Input - Button: --------------</p>
+  <input class="favorite styled" type="button" value="Add to favorites" />
+
+  <p>இப்போது input type = "button" என்பதற்குப் பதிலாக, button tagஐயே
+    பயன்படுத்துகிறார்கள்.</p>
+  <button class="favorite styled" type="button">Add to favorites</button>
+
+  <p> Keyboard Shortcuts to Buttons:</p>
+  <input type="button" value="Start machine" accesskey="s" />
+  <button accesskey="h" onclick="alert('You clicked the button.')">First, click me and see what happens.</button>
+
+  <p> குறிப்பு: Edge, IE, Chrome, Safari, Opera 15+: [ALT] + accesskey Firefox:
+    [ALT] [SHIFT] + accesskey button ஐ disabled ஆக்குவது எப்படி?</p>
+  <input type="button" value="Disable me" disabled />
+
+  <p> datalist: -------- recommended options கொடுக்கப் பயன்படும்;</p>
+
+  <label for="sweet-choice">Choose a flavor:</label>
+  <input list="sweet-flavors" id="sweet-choice" name="sweet-choice" />
+
+  <datalist id="sweet-flavors">
+    <option value="லட்டு"></option>
+    <option value="ஜிலேபி"></option>
+    <option value="ஜாங்கிரி"></option>
+    <option value="மைசூர்பாகு"></option>
+    <option value="பாதுஷா"></option>
+  </datalist>
+
+  <p>range: ---------</p>
+  <input type="range" list="tickmarks" />
+  <datalist id="tickmarks">
+    <option value="0"></option>
+    <option value="10"></option>
+    <option value="20"></option>
+    <option value="30"></option>
+  </datalist>
+
+  <p> color: --------</p>
+  <input type="color" list="redColors" />
+  <datalist id="redColors">
+    <option value="#800000"></option>
+    <option value="#8B0000"></option>
+    <option value="#A52A2A"></option>
+    <option value="#DC143C"></option>
+  </datalist>
+
+  <p>progress: ---------</p>
+  <label for="file">Java</label>
+  <progress id="file" max="100" value="70">70%</progress> <br />
+  <label for="file">Html</label>
+  <progress id="file" max="100" value="80">80%</progress>
+  <br>
+  <progress></progress>
+</body>
+
+</html>
